@@ -504,11 +504,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\TaskForge.csproj",
       "projectName": "TaskForge",
-      "projectPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge.csproj",
+      "projectPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\TaskForge.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\obj\\",
+      "outputPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
