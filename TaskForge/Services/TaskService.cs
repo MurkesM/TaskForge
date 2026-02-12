@@ -1,57 +1,41 @@
-﻿using Microsoft.EntityFrameworkCore;
-using TaskForge.Api.Models;
-using TaskForge.Data;
+﻿using TaskForge.Api.Models;
+using TaskForge.Repositories;
 
 namespace TaskForge.Services;
 
 public class TaskService : ITaskService
 {
-    private readonly AppDbContext _db;
+    private readonly ITaskRepository _repo;
 
-    public TaskService(AppDbContext db)
+    public TaskService(ITaskRepository repo)
     {
-        _db = db;
+        _repo = repo;
     }
 
-    public IEnumerable<TaskItem> GetAll()
+    public async Task<IEnumerable<TaskItem>> GetAllAsync()
     {
-        return _db.Tasks.AsNoTracking().ToList();
+        return await _repo.GetAllAsync();
     }
 
-    public TaskItem? Get(int id)
+    public async Task<TaskItem?> GetAsync(int id)
     {
-        return _db.Tasks.AsNoTracking().FirstOrDefault(t => t.Id == id);
+        return await _repo.GetByIdAsync(id);
     }
 
-    public TaskItem Create(TaskItem task)
+    public async Task<TaskItem> CreateAsync(TaskItem task)
     {
-        _db.Tasks.Add(task);
-        _db.SaveChanges();
-        return task;
+        return await _repo.CreateAsync(task);
     }
 
-    public TaskItem? Update(int id, TaskItem updated)
+    public async Task<TaskItem?> UpdateAsync(int id, TaskItem updated)
     {
-        var existing = _db.Tasks.FirstOrDefault(t => t.Id == id);
-        if (existing is null)
-            return null;
-
-        existing.Title = updated.Title;
-        existing.Description = updated.Description;
-        existing.IsComplete = updated.IsComplete;
-
-        _db.SaveChanges();
-        return existing;
+        // Ensure the ID is set correctly
+        updated.Id = id;
+        return await _repo.UpdateAsync(updated);
     }
 
-    public bool Delete(int id)
+    public async Task<bool> DeleteAsync(int id)
     {
-        var task = _db.Tasks.FirstOrDefault(t => t.Id == id);
-        if (task is null)
-            return false;
-
-        _db.Tasks.Remove(task);
-        _db.SaveChanges();
-        return true;
+        return await _repo.DeleteAsync(id);
     }
 }

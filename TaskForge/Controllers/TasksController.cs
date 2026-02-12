@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using AutoMapper;
 using TaskForge.Api.Models;
 using TaskForge.Dtos;
 using TaskForge.Services;
@@ -10,69 +11,66 @@ namespace TaskForge.Controllers;
 public class TasksController : ControllerBase
 {
     private readonly ITaskService _service;
+    private readonly IMapper _mapper;
 
-    public TasksController(ITaskService service)
+    public TasksController(ITaskService service, IMapper mapper)
     {
         _service = service;
+        _mapper = mapper;
     }
 
     // GET: api/tasks
     [HttpGet]
-    public ActionResult<IEnumerable<TaskItem>> GetAll()
+    public async Task<ActionResult<IEnumerable<TaskDto>>> GetAll()
     {
-        return Ok(_service.GetAll());
+        var tasks = await _service.GetAllAsync();
+        var dto = _mapper.Map<IEnumerable<TaskDto>>(tasks);
+        return Ok(dto);
     }
 
     // GET: api/tasks/{id}
     [HttpGet("{id}")]
-    public ActionResult<TaskItem> Get(int id)
+    public async Task<ActionResult<TaskDto>> Get(int id)
     {
-        var task = _service.Get(id);
+        var task = await _service.GetAsync(id);
         if (task is null)
             return NotFound();
 
-        return Ok(task);
+        var dto = _mapper.Map<TaskDto>(task);
+        return Ok(dto);
     }
 
     // POST: api/tasks
     [HttpPost]
-    public ActionResult<TaskItem> Create(CreateTaskDto dto)
+    public async Task<ActionResult<TaskDto>> Create(CreateTaskDto dto)
     {
-        var task = new TaskItem
-        {
-            Title = dto.Title,
-            Description = dto.Description
-        };
+        var task = _mapper.Map<TaskItem>(dto);
+        var created = await _service.CreateAsync(task);
 
-        var created = _service.Create(task);
+        var resultDto = _mapper.Map<TaskDto>(created);
 
-        return CreatedAtAction(nameof(Get), new { id = created.Id }, created);
+        return CreatedAtAction(nameof(Get), new { id = created.Id }, resultDto);
     }
 
     // PUT: api/tasks/{id}
     [HttpPut("{id}")]
-    public ActionResult<TaskItem> Update(int id, UpdateTaskDto dto)
+    public async Task<ActionResult<TaskDto>> Update(int id, UpdateTaskDto dto)
     {
-        var updatedTask = new TaskItem
-        {
-            Title = dto.Title,
-            Description = dto.Description,
-            IsComplete = dto.IsComplete
-        };
+        var updatedEntity = _mapper.Map<TaskItem>(dto);
 
-        var result = _service.Update(id, updatedTask);
-
-        if (result is null)
+        var updated = await _service.UpdateAsync(id, updatedEntity);
+        if (updated is null)
             return NotFound();
 
-        return Ok(result);
+        var resultDto = _mapper.Map<TaskDto>(updated);
+        return Ok(resultDto);
     }
 
     // DELETE: api/tasks/{id}
     [HttpDelete("{id}")]
-    public ActionResult Delete(int id)
+    public async Task<ActionResult> Delete(int id)
     {
-        var deleted = _service.Delete(id);
+        var deleted = await _service.DeleteAsync(id);
         if (!deleted)
             return NotFound();
 
