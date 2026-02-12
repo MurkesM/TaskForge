@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using TaskForge.Data;
 using TaskForge.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -5,7 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<ITaskService, TaskService>();
+builder.Services.AddScoped<ITaskService, TaskService>();
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlite("Data Source=taskforge.db"));
 
 var app = builder.Build();
 
