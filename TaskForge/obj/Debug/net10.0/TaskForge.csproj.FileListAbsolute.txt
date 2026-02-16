@@ -188,3 +188,8 @@ C:\Users\ADMIN\Documents\GitHub\TaskForge\TaskForge\bin\Debug\net10.0\runtimes\w
 C:\Users\ADMIN\Documents\GitHub\TaskForge\TaskForge\bin\Debug\net10.0\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\ADMIN\Documents\GitHub\TaskForge\TaskForge\bin\Debug\net10.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\ADMIN\Documents\GitHub\TaskForge\TaskForge\bin\Debug\net10.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\ADMIN\Documents\GitHub\TaskForge\TaskForge\bin\Debug\net10.0\AutoMapper.dll
+C:\Users\ADMIN\Documents\GitHub\TaskForge\TaskForge\bin\Debug\net10.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ADMIN\Documents\GitHub\TaskForge\TaskForge\bin\Debug\net10.0\FluentValidation.dll
+C:\Users\ADMIN\Documents\GitHub\TaskForge\TaskForge\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\ADMIN\Documents\GitHub\TaskForge\TaskForge\bin\Debug\net10.0\FluentValidation.AspNetCore.dll

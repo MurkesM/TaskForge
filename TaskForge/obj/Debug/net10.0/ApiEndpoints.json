@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[TaskForge.Api.Models.TaskItem, TaskForge, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[TaskForge.Dtos.TaskDto, TaskForge, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -35,7 +35,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "TaskForge.Api.Models.TaskItem",
+        "Type": "TaskForge.Dtos.TaskDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -44,6 +44,16 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "TaskForge.Controllers.TasksController",
+    "Method": "DeleteAll",
+    "RelativePath": "api/Tasks",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "TaskForge.Controllers.TasksController",
@@ -61,7 +71,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "TaskForge.Api.Models.TaskItem",
+        "Type": "TaskForge.Dtos.TaskDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -92,7 +102,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "TaskForge.Api.Models.TaskItem",
+        "Type": "TaskForge.Dtos.TaskDto",
         "MediaTypes": [
           "text/plain",
           "application/json",

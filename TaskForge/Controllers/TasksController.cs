@@ -76,4 +76,16 @@ public class TasksController : ControllerBase
 
         return NoContent();
     }
+
+    // DELETE: api/tasks/{id}
+    [HttpDelete()]
+    public async Task<ActionResult> DeleteAll()
+    {
+        var deleted = await _service.DeleteAllAsync();
+
+        if (!deleted)
+            return NotFound();
+
+        return NoContent();
+    }
 }
