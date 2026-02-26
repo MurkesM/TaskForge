@@ -31,6 +31,11 @@ public class TaskRepository : ITaskRepository
         return await _db.Tasks.FirstOrDefaultAsync(t => t.Title == title);
     }
 
+    public IQueryable<TaskItem> Query()
+    {
+        return _db.Tasks.AsQueryable();
+    }
+
     public async Task<TaskItem> CreateAsync(TaskItem task)
     {
         _db.Tasks.Add(task);

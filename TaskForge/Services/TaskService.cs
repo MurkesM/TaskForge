@@ -1,6 +1,8 @@
 ﻿using TaskForge.Api.Models;
+using TaskForge.Dtos;
 using TaskForge.Exceptions;
 using TaskForge.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace TaskForge.Services;
 
@@ -37,6 +39,64 @@ public class TaskService : ITaskService
             return null;
 
         return task;
+    }
+
+    public async Task<CursorResult<TaskItem>> QueryAsync(TaskQueryParameters query, int userId, string role)
+    {
+        var q = _repo.Query();
+
+        // Ownership enforcement
+        if (role != "Admin")
+            q = q.Where(t => t.UserId == userId);
+
+        // Searching
+        if (!string.IsNullOrWhiteSpace(query.Search))
+        {
+            var search = query.Search.ToLower();
+            q = q.Where(t =>
+                t.Title.ToLower().Contains(search) ||
+                (t.Description != null && t.Description.ToLower().Contains(search))
+            );
+        }
+
+        // Filtering
+        if (query.IsComplete.HasValue)
+            q = q.Where(t => t.IsComplete == query.IsComplete.Value);
+
+        // Sorting (cursor pagination requires stable ordering)
+        q = query.SortBy?.ToLower() switch
+        {
+            "title" => query.Description ? q.OrderByDescending(t => t.Title).ThenByDescending(t => t.Id)
+                                      : q.OrderBy(t => t.Title).ThenBy(t => t.Id),
+
+            "iscomplete" => query.Description ? q.OrderByDescending(t => t.IsComplete).ThenByDescending(t => t.Id)
+                                      : q.OrderBy(t => t.IsComplete).ThenBy(t => t.Id),
+
+            _ => query.Description ? q.OrderByDescending(t => t.Id)
+                                      : q.OrderBy(t => t.Id)
+        };
+
+        // Cursor logic
+        if (query.AfterId.HasValue)
+            q = q.Where(t => t.Id > query.AfterId.Value);
+
+        // Fetch limit + 1 to detect "hasMore"
+        var items = await q.Take(query.Limit + 1).ToListAsync();
+
+        bool hasMore = items.Count > query.Limit;
+
+        // Trim extra item
+        if (hasMore)
+            items.RemoveAt(items.Count - 1);
+
+        int? nextCursor = hasMore ? items.Last().Id : null;
+
+        return new CursorResult<TaskItem>
+        {
+            Items = items,
+            NextCursor = nextCursor,
+            HasMore = hasMore
+        };
     }
 
     // CREATE — assign ownership

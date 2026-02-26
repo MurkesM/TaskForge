@@ -48,6 +48,13 @@ public class TasksController : ControllerBase
         return Ok(_mapper.Map<TaskDto>(task));
     }
 
+    [HttpGet("query")]
+    public async Task<IActionResult> Query([FromQuery] TaskQueryParameters query)
+    {
+        var result = await _service.QueryAsync(query, CurrentUserId, CurrentUserRole);
+        return Ok(result);
+    }
+
     // POST: api/tasks
     [HttpPost]
     public async Task<ActionResult<TaskDto>> Create(CreateTaskDto dto)
