@@ -3,9 +3,11 @@ using AutoMapper;
 using TaskForge.Api.Models;
 using TaskForge.Dtos;
 using TaskForge.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TaskForge.Controllers;
 
+[Authorize(Roles = "Admin")]
 [ApiController]
 [Route("api/[controller]")]
 public class TasksController : ControllerBase
