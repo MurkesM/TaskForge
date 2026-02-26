@@ -1,4 +1,6 @@
-﻿namespace TaskForge.Api.Models;
+﻿using TaskForge.Models;
+
+namespace TaskForge.Api.Models;
 
 public class TaskItem
 {
@@ -6,4 +8,5 @@ public class TaskItem
     public string Title { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;
     public bool IsComplete { get; set; }
+    public int UserId { get; set; }
 }

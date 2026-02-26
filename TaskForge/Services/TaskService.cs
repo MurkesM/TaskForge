@@ -15,47 +15,79 @@ public class TaskService : ITaskService
         _logger = logger;
     }
 
-    public async Task<IEnumerable<TaskItem>> GetAllAsync()
+    // GET ALL — user sees only their tasks, admin sees all
+    public async Task<IEnumerable<TaskItem>> GetAllAsync(int userId, string role)
     {
-        return await _repo.GetAllAsync();
+        var all = await _repo.GetAllAsync();
+
+        if (role == "Admin")
+            return all;
+
+        return all.Where(t => t.UserId == userId);
     }
 
-    public async Task<TaskItem?> GetAsync(int id)
+    // GET ONE — enforce ownership
+    public async Task<TaskItem?> GetAsync(int id, int userId, string role)
     {
-        return await _repo.GetByIdAsync(id);
+        var task = await _repo.GetByIdAsync(id);
+        if (task is null)
+            return null;
+
+        if (task.UserId != userId && role != "Admin")
+            return null;
+
+        return task;
     }
 
-    public async Task<TaskItem> CreateAsync(TaskItem task)
+    // CREATE — assign ownership
+    public async Task<TaskItem> CreateAsync(TaskItem task, int userId)
     {
         using var scope = _logger.BeginScope("CreateTask {title}", task.Title);
 
-        _logger.LogInformation("Checking for duplicate title");
-
         var existing = await _repo.GetByTitleAsync(task.Title);
         if (existing is not null)
-        {
-            _logger.LogWarning("Duplicate title detected");
             throw new DomainException("A task with this title already exists.", 409);
-        }
 
-        _logger.LogInformation("Creating task");
+        task.UserId = userId;
+
         return await _repo.CreateAsync(task);
     }
 
-    public async Task<TaskItem?> UpdateAsync(int id, TaskItem updated)
+    // UPDATE — enforce ownership
+    public async Task<TaskItem?> UpdateAsync(int id, TaskItem updated, int userId, string role)
     {
-        // Ensure the ID is set correctly
+        var existing = await _repo.GetByIdAsync(id);
+        if (existing is null)
+            return null;
+
+        if (existing.UserId != userId && role != "Admin")
+            return null;
+
         updated.Id = id;
+        updated.UserId = existing.UserId;
+
         return await _repo.UpdateAsync(updated);
     }
 
-    public async Task<bool> DeleteAsync(int id)
+    // DELETE — enforce ownership
+    public async Task<bool> DeleteAsync(int id, int userId, string role)
     {
+        var existing = await _repo.GetByIdAsync(id);
+        if (existing is null)
+            return false;
+
+        if (existing.UserId != userId && role != "Admin")
+            return false;
+
         return await _repo.DeleteAsync(id);
     }
 
-    public async Task<bool> DeleteAllAsync()
+    // DELETE ALL — admin only
+    public async Task<bool> DeleteAllAsync(string role)
     {
+        if (role != "Admin")
+            return false;
+
         return await _repo.DeleteAllAsync();
     }
 }
