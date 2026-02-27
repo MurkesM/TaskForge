@@ -1,12 +1,15 @@
 ﻿using TaskForge.Api.Models;
+using TaskForge.Dtos;
 
 namespace TaskForge.Services;
 
 public interface ITaskService
 {
-    Task<IEnumerable<TaskItem>> GetAllAsync();
-    Task<TaskItem?> GetAsync(int id);
-    Task<TaskItem> CreateAsync(TaskItem task);
-    Task<TaskItem?> UpdateAsync(int id, TaskItem updated);
-    Task<bool> DeleteAsync(int id);
+    Task<IEnumerable<TaskItem>> GetAllAsync(int userId, string role);
+    Task<TaskItem?> GetAsync(int id, int userId, string role);
+    Task<CursorResultDto<TaskItem>> QueryAsync(TaskQueryParameters query, int userId, string role);
+    Task<TaskItem> CreateAsync(TaskItem task, int userId);
+    Task<TaskItem?> UpdateAsync(int id, TaskItem updated, int userId, string role);
+    Task<bool> DeleteAsync(int id, int userId, string role);
+    Task<bool> DeleteAllAsync(int userID, string role);
 }

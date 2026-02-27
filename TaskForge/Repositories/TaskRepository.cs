@@ -7,10 +7,12 @@ namespace TaskForge.Repositories;
 public class TaskRepository : ITaskRepository
 {
     private readonly AppDbContext _db;
+    private readonly ILogger<TaskRepository> _logger;
 
-    public TaskRepository(AppDbContext db)
+    public TaskRepository(AppDbContext db, ILogger<TaskRepository> logger)
     {
         _db = db;
+        _logger = logger;
     }
 
     public async Task<IEnumerable<TaskItem>> GetAllAsync()
@@ -21,6 +23,17 @@ public class TaskRepository : ITaskRepository
     public async Task<TaskItem?> GetByIdAsync(int id)
     {
         return await _db.Tasks.AsNoTracking().FirstOrDefaultAsync(t => t.Id == id);
+    }
+
+    public async Task<TaskItem?> GetByTitleAsync(string title)
+    {
+        _logger.LogDebug("Querying for task with title {title}", title);
+        return await _db.Tasks.FirstOrDefaultAsync(t => t.Title == title);
+    }
+
+    public IQueryable<TaskItem> Query()
+    {
+        return _db.Tasks.AsQueryable();
     }
 
     public async Task<TaskItem> CreateAsync(TaskItem task)
@@ -53,5 +66,14 @@ public class TaskRepository : ITaskRepository
         _db.Tasks.Remove(task);
         await _db.SaveChangesAsync();
         return true;
+    }
+
+    public async Task<bool> DeleteAllAsync()
+    {
+        var beforeDeletionCount = await _db.Tasks.CountAsync();
+        var tasks = await _db.Tasks.ToListAsync();
+        _db.Tasks.RemoveRange(tasks);
+        var deletedCount = await _db.SaveChangesAsync();
+        return deletedCount == beforeDeletionCount;
     }
 }
