@@ -1,6 +1,6 @@
 ﻿namespace TaskForge.Dtos;
 
-public class CursorResult<T>
+public class CursorResultDto<T>
 {
     public IEnumerable<T> Items { get; set; } = Enumerable.Empty<T>();
     public int? NextCursor { get; set; }

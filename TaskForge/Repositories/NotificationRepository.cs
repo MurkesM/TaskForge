@@ -22,6 +22,11 @@ public class NotificationRepository : INotificationRepository
         return _context.Notifications.AsQueryable();
     }
 
+    public Task<Notification?> GetByIdAsync(int id)
+    {
+        return _context.Notifications.FirstOrDefaultAsync(n => n.Id == id);
+    }
+
     public async Task MarkAsReadAsync(int id, int userId)
     {
         var n = await _context.Notifications

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using TaskForge.Dtos.Auth;
 using TaskForge.Services.Auth;
 
@@ -25,6 +26,7 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("login")]
+    [EnableRateLimiting("LoginPolicy")]
     public async Task<IActionResult> Login(LoginDto dto)
     {
         var token = await _auth.LoginAsync(dto);
@@ -36,5 +38,19 @@ public class AuthController : ControllerBase
     {
         var result = await _auth.GetCurrentUserAsync(User);
         return Ok(result);
+    }
+
+    [HttpPost("refresh")]
+    public async Task<IActionResult> Refresh([FromBody] RefreshRequest dto)
+    {
+        var result = await _auth.RefreshAsync(dto.RefreshToken);
+        return Ok(result);
+    }
+
+    [HttpPost("logout")]
+    public async Task<IActionResult> Logout([FromBody] RefreshRequest dto)
+    {
+        await _auth.LogoutAsync(dto.RefreshToken);
+        return Ok(new { message = "Logged out." });
     }
 }

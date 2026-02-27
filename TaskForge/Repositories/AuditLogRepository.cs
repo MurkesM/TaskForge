@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using TaskForge.Api.Models;
+﻿using TaskForge.Api.Models;
 using TaskForge.Data;
 
 public class AuditLogRepository : IAuditLogRepository
@@ -15,5 +14,10 @@ public class AuditLogRepository : IAuditLogRepository
     {
         _context.AuditLogs.Add(log);
         await _context.SaveChangesAsync();
+    }
+
+    public IQueryable<AuditLog> Query()
+    {
+        return _context.AuditLogs.AsQueryable();
     }
 }

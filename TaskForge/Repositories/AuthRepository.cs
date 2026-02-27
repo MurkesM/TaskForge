@@ -18,6 +18,11 @@ public class AuthRepository : IAuthRepository
         return await _db.Users.FirstOrDefaultAsync(u => u.Username == username);
     }
 
+    public async Task<User?> GetByIdAsync(int id)
+    {
+        return await _db.Users.FindAsync(id);
+    }
+
     public async Task<User> CreateAsync(User user)
     {
         _db.Users.Add(user);

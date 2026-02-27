@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TaskForge.Api.Models;
 using TaskForge.Dtos;
+using TaskForge.Exceptions;
 
 public class NotificationService : INotificationService
 {
@@ -16,7 +17,7 @@ public class NotificationService : INotificationService
         return _repo.AddAsync(notification);
     }
 
-    public async Task<CursorResult<Notification>> QueryAsync(int userId, NotificationQueryParameters query)
+    public async Task<CursorResultDto<Notification>> QueryAsync(int userId, NotificationQueryParameters query)
     {
         var q = _repo.Query()
             .Where(n => n.UserId == userId)
@@ -33,7 +34,7 @@ public class NotificationService : INotificationService
 
         int? nextCursor = hasMore ? items.Last().Id : null;
 
-        return new CursorResult<Notification>
+        return new CursorResultDto<Notification>
         {
             Items = items,
             NextCursor = nextCursor,
@@ -41,8 +42,18 @@ public class NotificationService : INotificationService
         };
     }
 
-    public Task MarkAsReadAsync(int id, int userId)
+    public async Task MarkAsReadAsync(int id, int userId)
     {
-        return _repo.MarkAsReadAsync(id, userId);
+        // Fetch the notification first
+        var notification = await _repo.GetByIdAsync(id);
+        if (notification is null)
+            throw new DomainException("Notification not found.", 404);
+
+        // Enforce ownership
+        if (notification.UserId != userId)
+            throw new DomainException("You do not have access to this notification.", 403);
+
+        // Mark as read
+        await _repo.MarkAsReadAsync(id, userId);
     }
 }

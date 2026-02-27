@@ -3,16 +3,72 @@
   "WorkspaceRootPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\dtos\\createtaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:dtos\\createtaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\dtos\\auth\\refreshrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:dtos\\auth\\refreshrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\services\\auth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:services\\auth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\dtos\\auth\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:dtos\\auth\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\repositories\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:repositories\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\repositories\\irefreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:repositories\\irefreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\repositories\\refreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:repositories\\refreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\models\\refreshtoken\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:models\\refreshtoken\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\services\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:services\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\controllers\\auditcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,22 +81,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\dtos\\notificationqueryparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -79,10 +119,6 @@
       "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:dtos\\auditqueryparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\dtos\\cursorresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:dtos\\cursorresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -91,24 +127,12 @@
       "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:dtos\\taskqueryparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\validation\\registerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:validation\\registerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\repositories\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:repositories\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\dtos\\auth\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:dtos\\auth\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\dtos\\auth\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:dtos\\auth\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\services\\auth\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:services\\auth\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\repositories\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -125,10 +149,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\repositories\\iauditlogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:repositories\\iauditlogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\services\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:services\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\repositories\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -149,14 +169,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\mapping\\taskprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:mapping\\taskprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\dtos\\createtaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:dtos\\createtaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\services\\auth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|solutionrelative:services\\auth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C94FF983-B23C-F979-D280-DBA4C1C39248}|TaskForge.csproj|c:\\users\\admin\\documents\\github\\taskforge\\taskforge\\dtos\\currentuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -210,7 +222,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -218,16 +230,81 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAEgAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAswHoAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-12T16:34:17.552Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RefreshRequest.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Dtos\\Auth\\RefreshRequest.cs",
+              "RelativeDocumentMoniker": "Dtos\\Auth\\RefreshRequest.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Dtos\\Auth\\RefreshRequest.cs",
+              "RelativeToolTip": "Dtos\\Auth\\RefreshRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T20:16:39.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthResponse.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Dtos\\Auth\\AuthResponse.cs",
+              "RelativeDocumentMoniker": "Dtos\\Auth\\AuthResponse.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Dtos\\Auth\\AuthResponse.cs",
+              "RelativeToolTip": "Dtos\\Auth\\AuthResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T20:15:23.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RefreshTokenRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Repositories\\RefreshTokenRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\RefreshTokenRepository.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Repositories\\RefreshTokenRepository.cs",
+              "RelativeToolTip": "Repositories\\RefreshTokenRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T19:53:52.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IRefreshTokenRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Repositories\\IRefreshTokenRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\IRefreshTokenRepository.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Repositories\\IRefreshTokenRepository.cs",
+              "RelativeToolTip": "Repositories\\IRefreshTokenRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T19:53:39.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RefreshToken.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Models\\RefreshToken\\RefreshToken.cs",
+              "RelativeDocumentMoniker": "Models\\RefreshToken\\RefreshToken.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Models\\RefreshToken\\RefreshToken.cs",
+              "RelativeToolTip": "Models\\RefreshToken\\RefreshToken.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T19:50:11.992Z",
               "EditorCaption": ""
             },
             {
@@ -244,7 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 12,
               "Title": "NotificationController.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Controllers\\NotificationController.cs",
               "RelativeDocumentMoniker": "Controllers\\NotificationController.cs",
@@ -257,7 +334,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 20,
               "Title": "NotificationQueryParameters.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Dtos\\NotificationQueryParameters.cs",
               "RelativeDocumentMoniker": "Dtos\\NotificationQueryParameters.cs",
@@ -270,20 +347,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "NotificationService.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Services\\NotificationService.cs",
               "RelativeDocumentMoniker": "Services\\NotificationService.cs",
               "ToolTip": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Services\\NotificationService.cs",
               "RelativeToolTip": "Services\\NotificationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-27T19:09:35.041Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 21,
               "Title": "INotificationService.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Services\\INotificationService.cs",
               "RelativeDocumentMoniker": "Services\\INotificationService.cs",
@@ -296,7 +373,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 23,
               "Title": "NotificationRepository.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Repositories\\NotificationRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\NotificationRepository.cs",
@@ -309,7 +386,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 22,
               "Title": "INotificationRepository.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Repositories\\INotificationRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\INotificationRepository.cs",
@@ -322,7 +399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 24,
               "Title": "Notification.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Models\\Notifications\\Notification.cs",
               "RelativeDocumentMoniker": "Models\\Notifications\\Notification.cs",
@@ -335,7 +412,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 28,
               "Title": "AuditQueryParameters.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Dtos\\AuditQueryParameters.cs",
               "RelativeDocumentMoniker": "Dtos\\AuditQueryParameters.cs",
@@ -348,7 +425,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 17,
               "Title": "AuditController.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Controllers\\AuditController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuditController.cs",
@@ -361,7 +438,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 27,
               "Title": "AuditLogService.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Services\\AuditLogService.cs",
               "RelativeDocumentMoniker": "Services\\AuditLogService.cs",
@@ -374,7 +451,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 35,
               "Title": "IAuditLogService.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Services\\IAuditLogService.cs",
               "RelativeDocumentMoniker": "Services\\IAuditLogService.cs",
@@ -387,7 +464,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 26,
               "Title": "AuditLogRepository.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Repositories\\AuditLogRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\AuditLogRepository.cs",
@@ -400,7 +477,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 36,
               "Title": "IAuditLogRepository.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Repositories\\IAuditLogRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\IAuditLogRepository.cs",
@@ -413,7 +490,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 25,
               "Title": "AuditLog.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Models\\AuditLog\\AuditLog.cs",
               "RelativeDocumentMoniker": "Models\\AuditLog\\AuditLog.cs",
@@ -426,7 +503,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 29,
               "Title": "CursorResult.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Dtos\\CursorResult.cs",
               "RelativeDocumentMoniker": "Dtos\\CursorResult.cs",
@@ -439,7 +516,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 30,
               "Title": "TaskQueryParameters.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Dtos\\TaskQueryParameters.cs",
               "RelativeDocumentMoniker": "Dtos\\TaskQueryParameters.cs",
@@ -452,7 +529,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "CurrentUserDTO.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Dtos\\CurrentUserDTO.cs",
               "RelativeDocumentMoniker": "Dtos\\CurrentUserDTO.cs",
@@ -464,33 +541,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "RegisterRequestValidator.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Validation\\RegisterRequestValidator.cs",
-              "RelativeDocumentMoniker": "Validation\\RegisterRequestValidator.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Validation\\RegisterRequestValidator.cs",
-              "RelativeToolTip": "Validation\\RegisterRequestValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T21:16:05.875Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "RegisterRequest.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Services\\Auth\\RegisterRequest.cs",
-              "RelativeDocumentMoniker": "Services\\Auth\\RegisterRequest.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Services\\Auth\\RegisterRequest.cs",
-              "RelativeToolTip": "Services\\Auth\\RegisterRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T21:15:26.822Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 32,
               "Title": "LoginDto.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Dtos\\Auth\\LoginDto.cs",
               "RelativeDocumentMoniker": "Dtos\\Auth\\LoginDto.cs",
@@ -503,7 +554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 31,
               "Title": "RegisterDto.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Dtos\\Auth\\RegisterDto.cs",
               "RelativeDocumentMoniker": "Dtos\\Auth\\RegisterDto.cs",
@@ -516,58 +567,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 7,
               "Title": "AuthRepository.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Repositories\\AuthRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\AuthRepository.cs",
               "ToolTip": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Repositories\\AuthRepository.cs",
               "RelativeToolTip": "Repositories\\AuthRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-17T17:21:17.256Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 8,
               "Title": "IAuthRepository.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Repositories\\IAuthRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\IAuthRepository.cs",
               "ToolTip": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Repositories\\IAuthRepository.cs",
               "RelativeToolTip": "Repositories\\IAuthRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-17T17:20:36.043Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAwCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-17T17:18:35.232Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 5,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Services\\Auth\\AuthService.cs",
               "RelativeDocumentMoniker": "Services\\Auth\\AuthService.cs",
               "ToolTip": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Services\\Auth\\AuthService.cs",
               "RelativeToolTip": "Services\\Auth\\AuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAcwLoAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T17:17:40.568Z"
+              "WhenOpened": "2026-02-17T17:17:40.568Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "JwtTokenService.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Services\\Auth\\JwtTokenService.cs",
               "RelativeDocumentMoniker": "Services\\Auth\\JwtTokenService.cs",
@@ -579,7 +631,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "IJwtTokenService.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Services\\Auth\\IJwtTokenService.cs",
               "RelativeDocumentMoniker": "Services\\Auth\\IJwtTokenService.cs",
@@ -591,7 +643,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "JwtOptions.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\JWT\\JwtOptions.cs",
               "RelativeDocumentMoniker": "JWT\\JwtOptions.cs",
@@ -603,7 +655,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 47,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -615,7 +667,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 46,
               "Title": "PasswordHasher.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Services\\Auth\\PasswordHasher.cs",
               "RelativeDocumentMoniker": "Services\\Auth\\PasswordHasher.cs",
@@ -627,7 +679,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 48,
               "Title": "IPasswordHasher.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Services\\Auth\\IPasswordHasher.cs",
               "RelativeDocumentMoniker": "Services\\Auth\\IPasswordHasher.cs",
@@ -639,7 +691,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 49,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\User\\User.cs",
               "RelativeDocumentMoniker": "User\\User.cs",
@@ -651,7 +703,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 18,
               "Title": "RequestLoggingMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Middleware\\RequestLoggingMiddleware.cs",
               "RelativeDocumentMoniker": "Middleware\\RequestLoggingMiddleware.cs",
@@ -664,7 +716,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 51,
               "Title": "DomainException.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Exceptions\\DomainException.cs",
               "RelativeDocumentMoniker": "Exceptions\\DomainException.cs",
@@ -676,20 +728,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 16,
               "Title": "TasksController.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Controllers\\TasksController.cs",
               "RelativeDocumentMoniker": "Controllers\\TasksController.cs",
               "ToolTip": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Controllers\\TasksController.cs",
               "RelativeToolTip": "Controllers\\TasksController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAqwF0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-16T17:46:22.607Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 50,
               "Title": "CustomProblemDetailsFactory.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Errors\\CustomProblemDetailsFactory.cs",
               "RelativeDocumentMoniker": "Errors\\CustomProblemDetailsFactory.cs",
@@ -701,7 +753,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 19,
               "Title": "ExceptionMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Middleware\\ExceptionMiddleware.cs",
               "RelativeDocumentMoniker": "Middleware\\ExceptionMiddleware.cs",
@@ -714,7 +766,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 39,
               "Title": "UpdateTaskDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Validation\\UpdateTaskDtoValidator.cs",
               "RelativeDocumentMoniker": "Validation\\UpdateTaskDtoValidator.cs",
@@ -726,7 +778,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 38,
               "Title": "CreateTaskDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Validation\\CreateTaskDtoValidator.cs",
               "RelativeDocumentMoniker": "Validation\\CreateTaskDtoValidator.cs",
@@ -738,7 +790,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 40,
               "Title": "TaskDto.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Dtos\\TaskDto.cs",
               "RelativeDocumentMoniker": "Dtos\\TaskDto.cs",
@@ -750,7 +802,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 41,
               "Title": "TaskProfile.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Mapping\\TaskProfile.cs",
               "RelativeDocumentMoniker": "Mapping\\TaskProfile.cs",
@@ -762,7 +814,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 37,
               "Title": "TaskRepository.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Repositories\\TaskRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\TaskRepository.cs",
@@ -774,7 +826,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 33,
               "Title": "ITaskRepository.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Repositories\\ITaskRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\ITaskRepository.cs",
@@ -787,20 +839,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "TaskService.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Services\\TaskService.cs",
               "RelativeDocumentMoniker": "Services\\TaskService.cs",
               "ToolTip": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Services\\TaskService.cs",
               "RelativeToolTip": "Services\\TaskService.cs",
-              "ViewState": "AgIAAN8AAAAAAAAAAAAAAPIAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAANoAAAAAAAAAAAAqwOsAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-12T17:26:50.518Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 15,
               "Title": "ITaskService.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Services\\ITaskService.cs",
               "RelativeDocumentMoniker": "Services\\ITaskService.cs",
@@ -808,11 +860,12 @@
               "RelativeToolTip": "Services\\ITaskService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T17:25:19.869Z"
+              "WhenOpened": "2026-02-12T17:25:19.869Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 34,
               "Title": "TaskItem.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Models\\TaskItem.cs",
               "RelativeDocumentMoniker": "Models\\TaskItem.cs",
@@ -825,20 +878,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAqwBEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T19:14:05.647Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 52,
               "Title": "UpdateTaskDto.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Dtos\\UpdateTaskDto.cs",
               "RelativeDocumentMoniker": "Dtos\\UpdateTaskDto.cs",
@@ -850,7 +890,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 3,
               "Title": "CreateTaskDto.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Dtos\\CreateTaskDto.cs",
               "RelativeDocumentMoniker": "Dtos\\CreateTaskDto.cs",
@@ -858,7 +898,21 @@
               "RelativeToolTip": "Dtos\\CreateTaskDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T17:22:07.757Z"
+              "WhenOpened": "2026-02-12T17:22:07.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Documents\\GitHub\\TaskForge\\TaskForge\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwBIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T19:14:05.647Z",
+              "EditorCaption": ""
             }
           ]
         }

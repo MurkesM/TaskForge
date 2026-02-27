@@ -164,3 +164,4 @@ C:\Users\ADMIN\Documents\GitHub\TaskForge\TaskForge\obj\Debug\net10.0\TaskForge.
 C:\Users\ADMIN\Documents\GitHub\TaskForge\TaskForge\obj\Debug\net10.0\TaskForge.genruntimeconfig.cache
 C:\Users\ADMIN\Documents\GitHub\TaskForge\TaskForge\obj\Debug\net10.0\ref\TaskForge.dll
 C:\Users\ADMIN\Documents\GitHub\TaskForge\TaskForge\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\Users\ADMIN\Documents\GitHub\TaskForge\TaskForge\bin\Debug\net10.0\BCrypt.Net-Next.dll

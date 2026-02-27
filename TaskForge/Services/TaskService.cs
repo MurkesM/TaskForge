@@ -43,15 +43,15 @@ public class TaskService : ITaskService
     {
         var task = await _repo.GetByIdAsync(id);
         if (task is null)
-            return null;
+            throw new DomainException("Task not found.", 404);
 
         if (task.UserId != userId && role != "Admin")
-            return null;
+            throw new DomainException("You do not have access to this task.", 403);
 
         return task;
     }
 
-    public async Task<CursorResult<TaskItem>> QueryAsync(TaskQueryParameters query, int userId, string role)
+    public async Task<CursorResultDto<TaskItem>> QueryAsync(TaskQueryParameters query, int userId, string role)
     {
         var q = _repo.Query();
 
@@ -94,7 +94,7 @@ public class TaskService : ITaskService
 
         int? nextCursor = hasMore ? items.Last().Id : null;
 
-        return new CursorResult<TaskItem>
+        return new CursorResultDto<TaskItem>
         {
             Items = items,
             NextCursor = nextCursor,
@@ -141,10 +141,10 @@ public class TaskService : ITaskService
     {
         var existing = await _repo.GetByIdAsync(id);
         if (existing is null)
-            return null;
+            throw new DomainException("Task not found.", 404);
 
         if (existing.UserId != userId && role != "Admin")
-            return null;
+            throw new DomainException("You do not have access to this task.", 403);
 
         var oldTitle = existing.Title;
         var oldDescription = existing.Description;
@@ -199,10 +199,10 @@ public class TaskService : ITaskService
     {
         var existing = await _repo.GetByIdAsync(id);
         if (existing is null)
-            return false;
+            throw new DomainException("Task not found.", 404);
 
         if (existing.UserId != userId && role != "Admin")
-            return false;
+            throw new DomainException("You do not have access to this task.", 403);
 
         var deleted = await _repo.DeleteAsync(id);
 

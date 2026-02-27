@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using System.Threading.RateLimiting;
 using TaskForge.Data;
 using TaskForge.Options;
 using TaskForge.Repositories;
@@ -54,6 +55,41 @@ builder.Services
         };
     });
 
+builder.Services.AddRateLimiter(options =>
+{
+    // Global limiter: 100 requests per minute per user/IP
+    options.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>(context =>
+        RateLimitPartition.GetTokenBucketLimiter(
+            partitionKey: context.User?.Identity?.Name
+                ?? context.Connection.RemoteIpAddress?.ToString()
+                ?? "anonymous",
+            factory: _ => new TokenBucketRateLimiterOptions
+            {
+                TokenLimit = 100,
+                TokensPerPeriod = 100,
+                ReplenishmentPeriod = TimeSpan.FromMinutes(1),
+                QueueLimit = 0,
+                QueueProcessingOrder = QueueProcessingOrder.OldestFirst
+            }
+        )
+    );
+
+    // Login limiter: 5 attempts per minute per IP
+    options.AddPolicy("LoginPolicy", context =>
+        RateLimitPartition.GetTokenBucketLimiter(
+            partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "anonymous",
+            factory: _ => new TokenBucketRateLimiterOptions
+            {
+                TokenLimit = 5,
+                TokensPerPeriod = 5,
+                ReplenishmentPeriod = TimeSpan.FromMinutes(1),
+                QueueLimit = 0,
+                QueueProcessingOrder = QueueProcessingOrder.OldestFirst
+            }
+        )
+    );
+});
+
 builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();
@@ -64,6 +100,8 @@ builder.Services.AddScoped<IAuditLogService, AuditLogService>();
 
 builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
+
+builder.Services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
 
 var app = builder.Build();
 
@@ -76,9 +114,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseMiddleware<TaskForge.Middleware.RequestLoggingMiddleware>();
 app.UseMiddleware<TaskForge.Middleware.ExceptionMiddleware>();
+app.UseMiddleware<TaskForge.Middleware.ResponseEnvelopeMiddleware>();
 
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+
 app.Run();

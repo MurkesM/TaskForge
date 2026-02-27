@@ -1,26 +1,5 @@
 [
   {
-    "ContainingType": "AuditController",
-    "Method": "GetLogs",
-    "RelativePath": "api/Audit",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "AfterId",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "Limit",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "NotificationController",
     "Method": "GetNotifications",
     "RelativePath": "api/Notification",
@@ -228,6 +207,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "TaskForge.Controllers.AuditLogController",
+    "Method": "Query",
+    "RelativePath": "audit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AfterId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Limit",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "TaskForge.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "auth/login",
@@ -245,12 +245,44 @@
   },
   {
     "ContainingType": "TaskForge.Controllers.AuthController",
+    "Method": "Logout",
+    "RelativePath": "auth/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "TaskForge.Dtos.Auth.RefreshRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskForge.Controllers.AuthController",
     "Method": "Me",
     "RelativePath": "auth/me",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskForge.Controllers.AuthController",
+    "Method": "Refresh",
+    "RelativePath": "auth/refresh",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "TaskForge.Dtos.Auth.RefreshRequest",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
