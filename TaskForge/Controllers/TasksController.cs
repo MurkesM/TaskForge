@@ -93,7 +93,7 @@ public class TasksController : ControllerBase
     [HttpDelete]
     public async Task<ActionResult> DeleteAll()
     {
-        var success = await _service.DeleteAllAsync(CurrentUserRole);
+        var success = await _service.DeleteAllAsync(CurrentUserId, CurrentUserRole);
         if (!success)
             return Forbid();
 

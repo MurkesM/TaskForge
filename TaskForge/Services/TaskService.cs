@@ -3,6 +3,7 @@ using System.Text.Json;
 using TaskForge.Api.Models;
 using TaskForge.Dtos;
 using TaskForge.Exceptions;
+using TaskForge.Models;
 using TaskForge.Repositories;
 
 namespace TaskForge.Services;
@@ -12,12 +13,18 @@ public class TaskService : ITaskService
     private readonly ITaskRepository _repo;
     private readonly ILogger<TaskService> _logger;
     private readonly IAuditLogService _audit;
+    private readonly INotificationService _notifications;
 
-    public TaskService(ITaskRepository repo, ILogger<TaskService> logger, IAuditLogService audit)
+    public TaskService(
+        ITaskRepository repo,
+        ILogger<TaskService> logger,
+        IAuditLogService audit,
+        INotificationService notifications)
     {
         _repo = repo;
         _logger = logger;
         _audit = audit;
+        _notifications = notifications;
     }
 
     // GET ALL — user sees only their tasks, admin sees all
@@ -48,11 +55,9 @@ public class TaskService : ITaskService
     {
         var q = _repo.Query();
 
-        // Ownership enforcement
         if (role != "Admin")
             q = q.Where(t => t.UserId == userId);
 
-        // Searching
         if (!string.IsNullOrWhiteSpace(query.Search))
         {
             var search = query.Search.ToLower();
@@ -62,11 +67,9 @@ public class TaskService : ITaskService
             );
         }
 
-        // Filtering
         if (query.IsComplete.HasValue)
             q = q.Where(t => t.IsComplete == query.IsComplete.Value);
 
-        // Sorting (cursor pagination requires stable ordering)
         q = query.SortBy?.ToLower() switch
         {
             "title" => query.Description ? q.OrderByDescending(t => t.Title).ThenByDescending(t => t.Id)
@@ -79,16 +82,13 @@ public class TaskService : ITaskService
                                       : q.OrderBy(t => t.Id)
         };
 
-        // Cursor logic
         if (query.AfterId.HasValue)
             q = q.Where(t => t.Id > query.AfterId.Value);
 
-        // Fetch limit + 1 to detect "hasMore"
         var items = await q.Take(query.Limit + 1).ToListAsync();
 
         bool hasMore = items.Count > query.Limit;
 
-        // Trim extra item
         if (hasMore)
             items.RemoveAt(items.Count - 1);
 
@@ -102,7 +102,7 @@ public class TaskService : ITaskService
         };
     }
 
-    // CREATE — assign ownership
+    // CREATE — assign ownership + audit + notify
     public async Task<TaskItem> CreateAsync(TaskItem task, int userId)
     {
         using var scope = _logger.BeginScope("CreateTask {title}", task.Title);
@@ -124,10 +124,19 @@ public class TaskService : ITaskService
             Metadata = JsonSerializer.Serialize(new { created.Title })
         });
 
+        await _notifications.NotifyAsync(new Notification
+        {
+            UserId = userId,
+            Type = "TaskCreated",
+            Message = $"Your task '{created.Title}' was created.",
+            EntityType = "Task",
+            EntityId = created.Id
+        });
+
         return created;
     }
 
-    // UPDATE — enforce ownership
+    // UPDATE — enforce ownership + audit + notify (including completion)
     public async Task<TaskItem?> UpdateAsync(int id, TaskItem updated, int userId, string role)
     {
         var existing = await _repo.GetByIdAsync(id);
@@ -139,6 +148,7 @@ public class TaskService : ITaskService
 
         var oldTitle = existing.Title;
         var oldDescription = existing.Description;
+        var wasComplete = existing.IsComplete;
 
         updated.Id = id;
         updated.UserId = existing.UserId;
@@ -160,10 +170,31 @@ public class TaskService : ITaskService
             })
         });
 
+        await _notifications.NotifyAsync(new Notification
+        {
+            UserId = existing.UserId,
+            Type = "TaskUpdated",
+            Message = $"Your task '{updated.Title}' was updated.",
+            EntityType = "Task",
+            EntityId = id
+        });
+
+        if (!wasComplete && updated.IsComplete)
+        {
+            await _notifications.NotifyAsync(new Notification
+            {
+                UserId = existing.UserId,
+                Type = "TaskCompleted",
+                Message = $"Your task '{updated.Title}' is now complete.",
+                EntityType = "Task",
+                EntityId = id
+            });
+        }
+
         return result;
     }
 
-    // DELETE — enforce ownership
+    // DELETE — enforce ownership + audit + notify
     public async Task<bool> DeleteAsync(int id, int userId, string role)
     {
         var existing = await _repo.GetByIdAsync(id);
@@ -185,13 +216,22 @@ public class TaskService : ITaskService
                 EntityId = id,
                 Metadata = JsonSerializer.Serialize(new { existing.Title })
             });
+
+            await _notifications.NotifyAsync(new Notification
+            {
+                UserId = existing.UserId,
+                Type = "TaskDeleted",
+                Message = $"Your task '{existing.Title}' was deleted.",
+                EntityType = "Task",
+                EntityId = id
+            });
         }
 
         return deleted;
     }
 
-    // DELETE ALL — admin only
-    public async Task<bool> DeleteAllAsync(string role)
+    // DELETE ALL — admin only + audit + notify
+    public async Task<bool> DeleteAllAsync(int userId, string role)
     {
         if (role != "Admin")
             return false;
@@ -202,11 +242,20 @@ public class TaskService : ITaskService
         {
             await _audit.LogAsync(new AuditLog
             {
-                UserId = 0, // system-level action
+                UserId = userId,
                 Action = "AllTasksDeleted",
                 EntityType = "Task",
                 EntityId = null,
                 Metadata = null
+            });
+
+            await _notifications.NotifyAsync(new Notification
+            {
+                UserId = userId,
+                Type = "AllTasksDeleted",
+                Message = "An administrator deleted all tasks.",
+                EntityType = "Task",
+                EntityId = null
             });
         }
 

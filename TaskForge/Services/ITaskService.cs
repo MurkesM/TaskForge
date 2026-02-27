@@ -11,5 +11,5 @@ public interface ITaskService
     Task<TaskItem> CreateAsync(TaskItem task, int userId);
     Task<TaskItem?> UpdateAsync(int id, TaskItem updated, int userId, string role);
     Task<bool> DeleteAsync(int id, int userId, string role);
-    Task<bool> DeleteAllAsync(string role);
+    Task<bool> DeleteAllAsync(int userID, string role);
 }
