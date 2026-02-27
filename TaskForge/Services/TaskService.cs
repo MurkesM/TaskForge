@@ -1,8 +1,9 @@
-﻿using TaskForge.Api.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
+using TaskForge.Api.Models;
 using TaskForge.Dtos;
 using TaskForge.Exceptions;
 using TaskForge.Repositories;
-using Microsoft.EntityFrameworkCore;
 
 namespace TaskForge.Services;
 
@@ -10,11 +11,13 @@ public class TaskService : ITaskService
 {
     private readonly ITaskRepository _repo;
     private readonly ILogger<TaskService> _logger;
+    private readonly IAuditLogService _audit;
 
-    public TaskService(ITaskRepository repo, ILogger<TaskService> logger)
+    public TaskService(ITaskRepository repo, ILogger<TaskService> logger, IAuditLogService audit)
     {
         _repo = repo;
         _logger = logger;
+        _audit = audit;
     }
 
     // GET ALL — user sees only their tasks, admin sees all
@@ -110,7 +113,18 @@ public class TaskService : ITaskService
 
         task.UserId = userId;
 
-        return await _repo.CreateAsync(task);
+        var created = await _repo.CreateAsync(task);
+
+        await _audit.LogAsync(new AuditLog
+        {
+            UserId = userId,
+            Action = "TaskCreated",
+            EntityType = "Task",
+            EntityId = created.Id,
+            Metadata = JsonSerializer.Serialize(new { created.Title })
+        });
+
+        return created;
     }
 
     // UPDATE — enforce ownership
@@ -123,10 +137,30 @@ public class TaskService : ITaskService
         if (existing.UserId != userId && role != "Admin")
             return null;
 
+        var oldTitle = existing.Title;
+        var oldDescription = existing.Description;
+
         updated.Id = id;
         updated.UserId = existing.UserId;
 
-        return await _repo.UpdateAsync(updated);
+        var result = await _repo.UpdateAsync(updated);
+
+        await _audit.LogAsync(new AuditLog
+        {
+            UserId = userId,
+            Action = "TaskUpdated",
+            EntityType = "Task",
+            EntityId = id,
+            Metadata = JsonSerializer.Serialize(new
+            {
+                oldTitle,
+                newTitle = updated.Title,
+                oldDescription,
+                newDescription = updated.Description
+            })
+        });
+
+        return result;
     }
 
     // DELETE — enforce ownership
@@ -139,7 +173,21 @@ public class TaskService : ITaskService
         if (existing.UserId != userId && role != "Admin")
             return false;
 
-        return await _repo.DeleteAsync(id);
+        var deleted = await _repo.DeleteAsync(id);
+
+        if (deleted)
+        {
+            await _audit.LogAsync(new AuditLog
+            {
+                UserId = userId,
+                Action = "TaskDeleted",
+                EntityType = "Task",
+                EntityId = id,
+                Metadata = JsonSerializer.Serialize(new { existing.Title })
+            });
+        }
+
+        return deleted;
     }
 
     // DELETE ALL — admin only
@@ -148,6 +196,20 @@ public class TaskService : ITaskService
         if (role != "Admin")
             return false;
 
-        return await _repo.DeleteAllAsync();
+        var deleted = await _repo.DeleteAllAsync();
+
+        if (deleted)
+        {
+            await _audit.LogAsync(new AuditLog
+            {
+                UserId = 0, // system-level action
+                Action = "AllTasksDeleted",
+                EntityType = "Task",
+                EntityId = null,
+                Metadata = null
+            });
+        }
+
+        return deleted;
     }
 }

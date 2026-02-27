@@ -22,7 +22,6 @@ public class AuthController : ControllerBase
     {
         var token = await _auth.RegisterAsync(dto);
         return Ok(new { token });
-
     }
 
     [HttpPost("login")]
@@ -38,5 +37,4 @@ public class AuthController : ControllerBase
         var result = await _auth.GetCurrentUserAsync(User);
         return Ok(result);
     }
-
 }
